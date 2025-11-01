@@ -4,10 +4,14 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build && ng run Gautamsugar:build-ssr:production",
+    "build:client": "ng build --configuration production",
+    "build:ssr": "ng run Gautamsugar:build-ssr:production",
+    "serve:ssr": "ng run Gautamsugar:serve-ssr:development",
+    "prerender": "ng run Gautamsugar:prerender",
+    "serve:node": "node dist/gautamsugar/server/main.js",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr:Gautamsugar": "node dist/gautamsugar/server/server.mjs"
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
